@@ -1,0 +1,188 @@
+/* Estilos generales y del header */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #ef72b3;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:#FCBBE7;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: crimson;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Agregado para que el botón de carrito pueda contener el contador */
+}
+
+.cart-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-count {
+    background-color: #ff4500;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+/* Estilos de la sección principal y las cards de productos */
+.main-container {
+    padding: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.product-info p {
+    font-size: 1.1em;
+    color: #ff4500;
+    font-weight: bold;
+}
+
+.add-to-cart-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para el Modal del Carrito (los nuevos) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija para que flote sobre la página */
+    z-index: 100; /* Asegura que esté por encima de todo lo demás */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita el scroll si el contenido es demasiado largo */
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde arriba y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.remove-item-btn {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 1.2em;
+}
